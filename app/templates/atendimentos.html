@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Registro de Atendimentos</h1>
+
+    <h2>Registrar Novo Atendimento</h2>
+    <form id="form-atendimento">
+        <div class="form-group">
+            <label for="select-cliente">Cliente</label>
+            <select id="select-cliente" name="cliente_id" required>
+                <option value="">Carregando Clientes...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="select-servico">Serviços</label>
+            <select id="select-servico" name="servico_id" required>
+                <option value="">Carregando Serviços...</option>
+            </select>
+        </div>
+
+        <div class="form-group full-width">
+            <label for="observacoes">Observações:</label>
+            <textarea name="observacoes" id="observacoes"></textarea>
+        </div>
+
+        <div class="form-group full-width">
+            <button type="submit" class="btn-primary">Registrar Atendimento</button>
+        </div>
+    </form>
+
+    <h2>Atendimentos Registrados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data</th>
+                <th>Cliente</th>
+                <th>Serviço</th>
+                <th>Valor</th>
+                <th>Obs.</th>
+                <th class="actions">Ações</th>
+            </tr>
+        </thead>
+        <tbody id="lista-atendimentos"></tbody>
+    </table>
+
+    {%block scripts%}
+        <script src="{{url_for('static', filename='js/atendimentos.js')}}" defer></script>
+    {%endblock%}
+{%endblock%}
