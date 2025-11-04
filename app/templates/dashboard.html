@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Dashboard</h1>
+    <p>Bem Vindo ao Sistema de Gestão de Serviços.</p>
+
+    <div id="dashboar-stats">
+        <div class="stat-card">
+            <h2>Clientes</h2>
+            <p id="count-clientes">...</p>
+        </div>
+        <div class="stat-card">
+            <h2>Serviços</h2>
+            <p id="count-servicos">...</p>
+        </div>
+        <div class="stat-card">
+            <h2>Atendimentos</h2>
+            <p id="count-atendimentos">...</p>
+        </div>
+    </div>
+    {% block scripts %}
+        <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    {%endblock%}
+{% endblock %}
