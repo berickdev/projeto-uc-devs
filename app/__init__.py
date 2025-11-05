@@ -16,11 +16,11 @@ def create_app(config_class=Config):
     from .routes.clientes_routes import bp_clientes
     app.register_blueprint(bp_clientes, url_prefix='/api/clientes')
 
-    from .routes.atendimentos_routes import bp_atendimentos
-    app.register_blueprint(bp_atendimentos, url_prefix='/api/atendimentos')
-
     from .routes.servicos_routes import bp_servicos
     app.register_blueprint(bp_servicos, url_prefix='/api/servicos')
+
+    from .routes.atendimentos_routes import bp_atendimentos
+    app.register_blueprint(bp_atendimentos, url_prefix='/api/atendimentos')
 
     from .routes.views_routes import bp_views
     app.register_blueprint(bp_views, url_prefix='/')

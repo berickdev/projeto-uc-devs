@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão Devs</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Gestão de Serviços</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header>
         <nav>
-            <a href="{{url_for('views.index')}}" class="logo">Gestão de Devs</a>
+            <a href="{{ url_for('views.index') }}" class="logo">Sistema de Gestão</a>
             <ul>
-                <li><a href="{{url_for('views.clientes_page')}}">Clientes</a></li>
-                <li><a href="{{url_for('views.servicos_page')}}">Serviços</a></li>
-                <li><a href="{{url_for('views.atendimentos_page')}}">Atendimentos</a></li>
+                <li><a href="{{ url_for('views.clientes_page') }}">Clientes</a></li>
+                <li><a href="{{ url_for('views.servicos_page') }}">Serviços</a></li>
+                <li><a href="{{ url_for('views.atendimentos_page') }}">Atendimentos</a></li>
             </ul>
         </nav>
     </header>
@@ -24,10 +24,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 - Prova Devs Final</p>
+        <p>&copy; 2025 - Prova Prática Final</p>
     </footer>
 
-    {% block script %}
+    {% block scripts %}
     {% endblock %}
 </body>
 </html>
